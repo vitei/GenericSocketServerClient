@@ -1,0 +1,54 @@
+{
+    "welcome_message": "welcome to the generic server. Please drive carefully",
+    "message_seperator": "###",
+    "param_separator": "|",
+    "events": {
+        "sling": {
+            "name": "FireCatapult",
+            "short_name": "sling",
+            "params": {
+                "planetID": "UINT",
+                "buildingID": "UINT",
+                "slingAngle": "FLOAT",
+                "force": "FLOAT"
+            },
+            "helpDef": "fires a catapult from a specified planet with a given force"
+        },
+        "building": {
+            "name": "CreateBuilding",
+            "short_name": "building",
+            "params": {
+                "onPlanetID": "UINT",
+                "atPosition": "FLOAT",
+                "withNumberDenizens": "UINT",
+                "byPlayer": "UINT"
+            },
+            "helpDef": "spawns a build on a specified planet holding a number of citizens and owned by a specified player"
+        },
+        "planet": {
+            "name": "SpawnPlanet",
+            "short_name": "planet",
+            "params": {
+                "centerX": "FLOAT",
+                "centerY": "FLOAT",
+                "innerRadius": "FLOAT",
+                "surfaceRadius": "FLOAT",
+                "orbitRadius": "FLOAT",
+                "population": "UINT",
+                "player": "UINT"
+            },
+            "helpDef": "fires a catapult from a specified planet with a given force"
+        },
+        "camera": {
+            "name": "SetCamera",
+            "short_name": "camera",
+            "params": {
+                "rotation": "FLOAT",
+                "scale": "FLOAT",
+                "positionX": "FLOAT",
+                "positionY": "FLOAT"
+            },
+            "helpDef": "change the position of the camera in the world"
+        }
+    }
+}
