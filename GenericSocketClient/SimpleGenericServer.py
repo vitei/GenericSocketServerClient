@@ -11,6 +11,7 @@ class SimpleGenericServer(Protocol):
     commandPipe = []
 
     messageSeparator = ""
+    paramSeparator = ""
 
     def connectionMade(self):
 
@@ -39,15 +40,36 @@ class SimpleGenericServer(Protocol):
     def dataReceived(self, data):
         
         data = data.rstrip('\r\n')
-        dataIntoArray = data.split('|')
+        dataIntoArray = data.split(self.factory.idl["param_separator"])
         command = dataIntoArray[0]
         params = dataIntoArray[1:len(dataIntoArray)]
 
-        if command in self.factory.idl["events"]:
+        if command == "help":
+            if len(params) == 0:
+                self.sendMessage("All available commands:\n")
+                for command in self.factory.idl["events"]:
+                    self.sendMessage("%s:\n" % command.encode('utf8'))
+
+            elif len(params) == 1:
+                print "outer"
+                if params[0] in self.factory.idl["events"]:
+                    print "inner"
+                    print "***"
+                    print params[0]
+                    self.sendMessage("%s: %s\n params: %s\n" % (params[0].encode('utf8'),self.factory.idl["events"][params[0]]["helpDef"].encode('utf8'),self.factory.idl["events"][params[0]]["params"]))
+            else:
+                self.sendMessage("Try issuing help with 0 or 1 parameters only\n")
+
+
+        elif command in self.factory.idl["events"]:
             
             expectedNumArgs   = len(self.factory.idl["events"][command]["params"])
             functionToExecute = self.runFunction
-            functionHelpText  = "this is just a test"
+            print "********"
+            print self.factory.idl["events"][command]["helpDef"]
+            # ugh... I'm not sure why but twisted doesn't like unicode... So decode here
+            #functionHelpText  = self.factory.idl["events"][command]["helpDef"].encode('utf8')
+            functionHelpText = self.factory.idl["events"][command]["params"]
 
             if expectedNumArgs == 0 and len(content) == 0:
                 functionToExecute(self.factory.idl["events"][command])

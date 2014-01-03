@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>CCB08758-B7E8-4402-899D-C9AE66DA806D</string>
+	<key>IDESourceControlProjectName</key>
+	<string>GenericSocketClient</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>F5083296-E99D-450C-8E32-C92D70C611F4</key>
+		<string>ssh://git.vitei.com/vitei/GenericSocketClient</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>GenericSocketClient.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>F5083296-E99D-450C-8E32-C92D70C611F4</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>ssh://git.vitei.com/vitei/GenericSocketClient</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>F5083296-E99D-450C-8E32-C92D70C611F4</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>F5083296-E99D-450C-8E32-C92D70C611F4</string>
+			<key>IDESourceControlWCCName</key>
+			<string>GenericSocketClient</string>
+		</dict>
+	</array>
+</dict>
+</plist>
